@@ -3,6 +3,8 @@ description: Jitsi Meet Web Plugin. A plugin for integrating open source Jitsi M
 version: 1.0.14
 homepage: https://github.com/thorito/jitsi_meet
 
+publish_to: none
+
 environment:
   sdk: ">=2.18.5 <4.0.0"
   flutter: ">=2.5.0"
@@ -11,7 +13,11 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.1.4
-  omni_jitsi_meet_platform_interface: ^1.0.14
+  omni_jitsi_meet_platform_interface:
+    git:
+      url: https://github.com/rijulsudhir/jitsi_meet.git
+      ref: develop
+      path: omni_jitsi_meet_platform_interface
 
   flutter_web_plugins:
     sdk: flutter

@@ -12,8 +12,16 @@ dependencies:
   flutter:
     sdk: flutter
 
-  omni_jitsi_meet_platform_interface: ^1.0.14
-  omni_jitsi_meet_web_plugin: ^1.0.14
+  omni_jitsi_meet_platform_interface:
+    git:
+      url: https://github.com/rijulsudhir/jitsi_meet.git
+      ref: develop
+      path: omni_jitsi_meet_platform_interface
+  omni_jitsi_meet_web_plugin:
+    git:
+      url: https://github.com/rijulsudhir/jitsi_meet.git
+      ref: develop
+      path: omni_jitsi_meet_web_plugin
 
 dev_dependencies:
   flutter_test:
