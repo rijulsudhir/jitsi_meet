@@ -63,8 +63,8 @@ public class SwiftJitsiMeetPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
                 builder.setSubject(subject)
             }
 
-            if let token = arguments["token"] as? String {
-                builder.token = token;
+            if let jwt = arguments["jwt"] as? String {
+                builder.jwt = jwt;
             }
 
             if let isAudioMuted = arguments["audioMuted"] as? Bool {

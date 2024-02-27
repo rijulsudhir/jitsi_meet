@@ -99,7 +99,7 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler,
             call.argument("serverURL") ?: "https://meet.jit.si"
 
         val subject: String? = call.argument("subject")
-        val token: String? = call.argument("token")
+        val jwt: String? = call.argument("jwt")
         val isAudioMuted: Boolean? = call.argument("audioMuted")
         val isAudioOnly: Boolean? = call.argument("audioOnly")
         val isVideoMuted: Boolean? = call.argument("videoMuted")
@@ -119,7 +119,7 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler,
             setRoom(room)
             if (serverURL != null) setServerURL(serverURL)
             if (subject != null) setSubject(subject)
-            if (token != null) setToken(token)
+            if (jwt != null) setToken(jwt)
             if (isAudioMuted != null) setAudioMuted(isAudioMuted)
             if (isAudioOnly != null) setAudioOnly(isAudioOnly)
             if (isVideoMuted != null) setVideoMuted(isVideoMuted)

@@ -15,9 +15,9 @@ export 'jitsi_meeting_listener.dart';
 
 abstract class JitsiMeetPlatform extends PlatformInterface {
   /// Constructs a JitsiMeetPlatform.
-  JitsiMeetPlatform() : super(token: _token);
+  JitsiMeetPlatform() : super(jwt: _jwt);
 
-  static final Object _token = Object();
+  static final Object _jwt = Object();
 
   static JitsiMeetPlatform _instance = MethodChannelJitsiMeet();
 
@@ -27,7 +27,7 @@ abstract class JitsiMeetPlatform extends PlatformInterface {
   static JitsiMeetPlatform get instance => _instance;
 
   static set instance(JitsiMeetPlatform instance) {
-    PlatformInterface.verifyToken(instance, _token);
+    PlatformInterface.verifyToken(instance, _jwt);
     _instance = instance;
   }
 

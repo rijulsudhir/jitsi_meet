@@ -7,7 +7,7 @@ class JitsiMeetingOptions {
   final String room;
   final String? serverURL;
   final String? subject;
-  final String? token;
+  final String? jwt;
   final bool? audioMuted;
   final bool? audioOnly;
   final bool? videoMuted;
@@ -23,7 +23,7 @@ class JitsiMeetingOptions {
     required this.room,
     this.serverURL,
     this.subject,
-    this.token,
+    this.jwt,
     this.audioMuted,
     this.audioOnly,
     this.videoMuted,
@@ -51,7 +51,7 @@ class JitsiMeetingOptions {
   @override
   String toString() {
     return 'OMNI_JITSI - JitsiMeetingOptions { room: $room, serverURL: $serverURL, '
-        'subject: $subject, token: $token, audioMuted: $audioMuted, '
+        'subject: $subject, jwt: $jwt, audioMuted: $audioMuted, '
         'audioOnly: $audioOnly, videoMuted: $videoMuted, '
         'userDisplayName: $userDisplayName, userEmail: $userEmail }';
   }

@@ -27,7 +27,7 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
       'room': options.room.trim(),
       'serverURL': options.serverURL?.trim(),
       'subject': options.subject?.trim(),
-      'token': options.token,
+      'jwt': options.jwt,
       'audioMuted': options.audioMuted,
       'audioOnly': options.audioOnly,
       'videoMuted': options.videoMuted,
